@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RGB Color Game</title>
+  <link rel="stylesheet" type="text/css" href="colorgame.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <button id="help">?</button>
+  <h1>The Great <span id="goalDisplay">RGB</span> Color Game</h1>
+
+  <div id="toolbar">
+    <div class="container">
+      <button id="newGame">New Colors</button>
+      <span id="status"></span>
+      <button id="easymode">Easy</button>
+      <button id="hardmode" class="selected">Hard</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+
+  <div id="overlay">
+    <div>
+      <div>
+        <h3>How to Play?</h3>
+        <p>This is a color guessing game. On top, the RGB color code of a randomly picked color is displayed, for example <em>RGB(123, 231, 213)</em>. You have to guess which of the squares below uses this color.</p>
+        <p>You can switch between Easy and Hard mode. Easy mode gives 3 squares to choose from, Hard mode gives 6. Switching the mode starts a new game.</p>
+        <h5>What is RGB?</h5>
+        <p>RGB is a color model used on computer screens. Each color is composed of three components, <strong>R</strong>ed, <strong>G</strong>reen and <strong>B</strong>lue. Each component is given as a number between 0 and 255. 0 means total absence of that component, 255 means the component is present in its fullest intensity. This gives over 16.7 million combinations. Read more about RGB on <a href="https://en.wikipedia.org/wiki/RGB_color_model">Wikipedia</a>.</p>
+        <p>If all three components are 0, no color is present and gives black. If all three components are 255, the intensity is at maximum and gives white.</p>
+        <p>A few examples:</p>
+        <div>
+           <div style="float: right; padding-right: 30px;">
+            <p style="text-align: center; margin: 0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AdditiveColor.svg/240px-AdditiveColor.svg.png" alt="RGB explained" style="height: 100px;" />
+            <br /><small><a href="https://commons.wikimedia.org/wiki/File:AdditiveColor.svg">Source</a></small></p>
+           </div>
+          <ul>
+            <li>RGB(255, 0, 0) gives <span style="color:#ff0000"><strong>red</strong></span></li>
+            <li>RGB(0, 255, 0) gives <span style="color:#00ff00"><strong>green</strong></span></li>
+            <li>RGB(0, 0, 255) gives <span style="color:#0000ff"><strong>blue</strong></span></li>
+            <li>RGB(255, 255, 0) gives <span style="color:#ffff00"><strong>yellow</strong></span></li>
+            <li>RGB(255, 0, 255) gives <span style="color:#ff00ff"><strong>magenta</strong></span></li>
+            <li>RGB(0, 255, 255) gives <span style="color:#00ffff"><strong>cyan</strong></span></li>
+          </ul>
+        </div>
+      </div>
+      <button id="btnClose">Close</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="colorgame.js"></script>
+  
+</body>
+</html>
